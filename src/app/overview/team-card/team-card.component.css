@@ -1,0 +1,45 @@
+.trackingTeamCard{
+    border:  1px solid lightgray;
+    padding: 10px 10px 50px 10px;
+    position: relative;
+    width: 300px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.trackingTeamCard a{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: unset;
+    text-decoration: unset;
+}
+
+.trackingTeamCard img{
+    float: right;
+}
+
+.trackingTeamCard .win, .trackingTeamCard .lose{
+    border-radius: 10px;
+    padding: 3px 5px;
+    color: white;
+    margin-right: 5px;
+}
+
+.trackingTeamCard .win{
+    background-color: green;
+}
+
+.trackingTeamCard .lose{
+    background-color: red;
+}
+
+.trackingTeamCard .btnRemove{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

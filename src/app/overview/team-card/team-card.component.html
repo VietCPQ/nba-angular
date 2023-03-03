@@ -1,0 +1,22 @@
+<div *ngIf="teamData" class="trackingTeamCard">
+  <span class="btnRemove" [id]="'remove'+ teamData.abbreviation" (click)="removeTrackingTeam()">X</span>
+  <h2>{{teamData.full_name}} [{{teamData.abbreviation}}]</h2>
+  <p><b>{{teamData.conference}}ern conference</b></p>
+  <hr />
+  <div *ngIf="listStatus.length>0, else loading">
+    <img width="120" [src]="'https://interstate21.com/nba-logos/'+teamData.abbreviation + '.png'" />
+    <p>Result of past 12 days</p>
+    <div>
+      <ng-container *ngFor="let status of listStatus">
+        <span [ngClass]="status=='W'?'win':'lose'">{{status}}</span>
+      </ng-container>
+    </div>
+    <p>Avg pts scored: {{avgScored}}</p>
+    <p>Avg pts conceded: {{avgConceded}}</p>
+  </div>
+  <a [routerLink]="'results/' + teamData.abbreviation">See game results >></a>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

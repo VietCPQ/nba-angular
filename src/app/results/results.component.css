@@ -1,0 +1,14 @@
+.card-result{
+    display: inline-block;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+
+.card-result a{
+    text-decoration: unset;
+    background-color: green;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}

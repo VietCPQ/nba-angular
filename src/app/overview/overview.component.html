@@ -1,0 +1,12 @@
+<div>
+  <select #teamSelected id="teamSelect">
+    <option *ngFor="let team of teams$|async" [value]="team.id">
+      {{team.full_name}}
+    </option>
+  </select>
+  <button (click)="onAdd(teamSelected.value)" id="trackBtn">Track team</button>
+</div>
+
+<div class="trackingTeam">
+  <app-team-card *ngFor="let trackingTeam of trackingTeam$|async" [teamData]="trackingTeam"></app-team-card>
+</div>
